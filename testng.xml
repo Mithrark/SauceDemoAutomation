@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="saucedemo_automation" verbose="1">
+
+    <test name="SauceDemo Tests">
+        <classes>
+            <class name="tests.LoginTest">
+                <methods>
+                    <include name="TC_Login_01_validLogin"/>
+                    <include name="TC_Login_02_invalidLogin"/>
+                    <include name="TC_Login_03_emptyFields"/>
+                    <include name="TC_Login_04_lockedOutUser"/>
+                    
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
