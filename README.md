@@ -52,7 +52,7 @@ SauceDemoAutomation/
   - Complete purchase  
 
 - **Post-Order**
-  - Order confirmation message
+  - Order confirmation message 
   - Navigate back to products  
 
 - **Edge Cases**
