@@ -65,8 +65,7 @@ public class ProductsPage {
         List<WebElement> nameElements = driver.findElements(productNames);
         List<String> names = new ArrayList<>();
 
-        for (WebElement nameElement : nameElements) {
-      
+        for (WebElement nameElement : nameElements) {     
             names.add(nameElement.getText());
         }
 
