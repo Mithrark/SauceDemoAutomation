@@ -1,57 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-11T14:14:53 IST" name="Default suite" finished-at="2025-09-11T14:15:08 IST" duration-ms="14556">
+  <suite started-at="2025-09-11T17:06:07 IST" name="Default suite" finished-at="2025-09-11T17:07:40 IST" duration-ms="93336">
     <groups>
     </groups>
-    <test started-at="2025-09-11T14:14:53 IST" name="Default test" finished-at="2025-09-11T14:15:08 IST" duration-ms="14556">
+    <test started-at="2025-09-11T17:06:07 IST" name="Default test" finished-at="2025-09-11T17:07:40 IST" duration-ms="93336">
       <class name="tests.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@7c7a06ec]" started-at="2025-09-11T14:14:53 IST" name="setup" finished-at="2025-09-11T14:14:58 IST" duration-ms="4715" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:06:07 IST" name="setup" finished-at="2025-09-11T17:06:15 IST" duration-ms="8226" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="SetupPages()[pri:0, instance:tests.LoginTest@7c7a06ec]" started-at="2025-09-11T14:14:58 IST" name="SetupPages" finished-at="2025-09-11T14:14:58 IST" duration-ms="332" status="PASS">
+        <test-method is-config="true" signature="SetupPages()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:06:15 IST" name="SetupPages" finished-at="2025-09-11T17:06:15 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetupPages -->
-        <test-method signature="TC_Cart_01_addToCart()[pri:0, instance:tests.LoginTest@7c7a06ec]" started-at="2025-09-11T14:14:58 IST" name="TC_Cart_01_addToCart" finished-at="2025-09-11T14:14:58 IST" duration-ms="142" status="PASS">
+        <test-method signature="TC_Cart_01_01addToCart()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:06:15 IST" name="TC_Cart_01_01addToCart" finished-at="2025-09-11T17:06:15 IST" duration-ms="485" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_Cart_01_addToCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@7c7a06ec]" started-at="2025-09-11T14:14:58 IST" name="tearDown" finished-at="2025-09-11T14:14:58 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- TC_Cart_01_01addToCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:06:15 IST" name="tearDown" finished-at="2025-09-11T17:06:26 IST" duration-ms="10085" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@7c7a06ec]" started-at="2025-09-11T14:14:58 IST" name="setup" finished-at="2025-09-11T14:15:03 IST" duration-ms="4275" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:06:26 IST" name="setup" finished-at="2025-09-11T17:06:29 IST" duration-ms="3856" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="SetupPages()[pri:0, instance:tests.LoginTest@7c7a06ec]" started-at="2025-09-11T14:15:03 IST" name="SetupPages" finished-at="2025-09-11T14:15:03 IST" duration-ms="349" status="PASS">
+        <test-method is-config="true" signature="SetupPages()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:06:29 IST" name="SetupPages" finished-at="2025-09-11T17:06:29 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetupPages -->
-        <test-method signature="TC_Cart_02_viewProduct()[pri:0, instance:tests.LoginTest@7c7a06ec]" started-at="2025-09-11T14:15:03 IST" name="TC_Cart_02_viewProduct" finished-at="2025-09-11T14:15:03 IST" duration-ms="206" status="PASS">
+        <test-method signature="TC_Cart_02_02viewProduct()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:06:29 IST" name="TC_Cart_02_02viewProduct" finished-at="2025-09-11T17:06:30 IST" duration-ms="493" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_Cart_02_viewProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@7c7a06ec]" started-at="2025-09-11T14:15:03 IST" name="tearDown" finished-at="2025-09-11T14:15:03 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- TC_Cart_02_02viewProduct -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:06:30 IST" name="tearDown" finished-at="2025-09-11T17:06:30 IST" duration-ms="550" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@7c7a06ec]" started-at="2025-09-11T14:15:03 IST" name="setup" finished-at="2025-09-11T14:15:07 IST" duration-ms="3825" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:06:30 IST" name="setup" finished-at="2025-09-11T17:06:34 IST" duration-ms="3860" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="SetupPages()[pri:0, instance:tests.LoginTest@7c7a06ec]" started-at="2025-09-11T14:15:07 IST" name="SetupPages" finished-at="2025-09-11T14:15:07 IST" duration-ms="353" status="PASS">
+        <test-method is-config="true" signature="SetupPages()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:06:34 IST" name="SetupPages" finished-at="2025-09-11T17:06:34 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetupPages -->
-        <test-method signature="TC_Cart_03_AddMultipleItems()[pri:0, instance:tests.LoginTest@7c7a06ec]" started-at="2025-09-11T14:15:07 IST" name="TC_Cart_03_AddMultipleItems" finished-at="2025-09-11T14:15:08 IST" duration-ms="313" status="PASS">
+        <test-method signature="TC_Cart_03_03AddMultipleItems()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:06:34 IST" name="TC_Cart_03_03AddMultipleItems" finished-at="2025-09-11T17:06:35 IST" duration-ms="550" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_Cart_03_AddMultipleItems -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@7c7a06ec]" started-at="2025-09-11T14:15:08 IST" name="tearDown" finished-at="2025-09-11T14:15:08 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- TC_Cart_03_03AddMultipleItems -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:06:35 IST" name="tearDown" finished-at="2025-09-11T17:06:35 IST" duration-ms="542" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:06:35 IST" name="setup" finished-at="2025-09-11T17:06:39 IST" duration-ms="4021" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="TC_Cart_04_04RemoveItemFromCart()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:06:39 IST" name="TC_Cart_04_04RemoveItemFromCart" finished-at="2025-09-11T17:06:40 IST" duration-ms="614" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Cart_04_04RemoveItemFromCart -->
+        <test-method is-config="true" signature="SetupPages()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:06:39 IST" name="SetupPages" finished-at="2025-09-11T17:06:39 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetupPages -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:06:40 IST" name="tearDown" finished-at="2025-09-11T17:06:41 IST" duration-ms="483" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:06:41 IST" name="setup" finished-at="2025-09-11T17:06:53 IST" duration-ms="12588" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="SetupPages()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:06:53 IST" name="SetupPages" finished-at="2025-09-11T17:06:53 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetupPages -->
+        <test-method signature="TC_Login_01_validLogin()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:06:53 IST" name="TC_Login_01_validLogin" finished-at="2025-09-11T17:06:53 IST" duration-ms="279" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Login_01_validLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:06:53 IST" name="tearDown" finished-at="2025-09-11T17:07:04 IST" duration-ms="10091" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:07:04 IST" name="setup" finished-at="2025-09-11T17:07:08 IST" duration-ms="3994" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="SetupPages()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:07:08 IST" name="SetupPages" finished-at="2025-09-11T17:07:08 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetupPages -->
+        <test-method signature="TC_Login_02_invalidLogin()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:07:08 IST" name="TC_Login_02_invalidLogin" finished-at="2025-09-11T17:07:08 IST" duration-ms="226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Login_02_invalidLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:07:08 IST" name="tearDown" finished-at="2025-09-11T17:07:08 IST" duration-ms="539" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:07:08 IST" name="setup" finished-at="2025-09-11T17:07:12 IST" duration-ms="3705" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="SetupPages()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:07:12 IST" name="SetupPages" finished-at="2025-09-11T17:07:12 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetupPages -->
+        <test-method signature="TC_Login_03_emptyFields()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:07:12 IST" name="TC_Login_03_emptyFields" finished-at="2025-09-11T17:07:12 IST" duration-ms="217" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Login_03_emptyFields -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:07:12 IST" name="tearDown" finished-at="2025-09-11T17:07:13 IST" duration-ms="512" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:07:13 IST" name="setup" finished-at="2025-09-11T17:07:17 IST" duration-ms="4150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="SetupPages()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:07:17 IST" name="SetupPages" finished-at="2025-09-11T17:07:17 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetupPages -->
+        <test-method signature="TC_Login_04_lockedOutUser()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:07:17 IST" name="TC_Login_04_lockedOutUser" finished-at="2025-09-11T17:07:17 IST" duration-ms="248" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Login_04_lockedOutUser -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:07:17 IST" name="tearDown" finished-at="2025-09-11T17:07:18 IST" duration-ms="473" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:07:18 IST" name="setup" finished-at="2025-09-11T17:07:22 IST" duration-ms="4011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="SetupPages()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:07:22 IST" name="SetupPages" finished-at="2025-09-11T17:07:22 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetupPages -->
+        <test-method signature="TC_Product_01_productsVisbile()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:07:22 IST" name="TC_Product_01_productsVisbile" finished-at="2025-09-11T17:07:22 IST" duration-ms="268" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Product_01_productsVisbile -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:07:22 IST" name="tearDown" finished-at="2025-09-11T17:07:22 IST" duration-ms="522" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:07:22 IST" name="setup" finished-at="2025-09-11T17:07:26 IST" duration-ms="4052" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="SetupPages()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:07:26 IST" name="SetupPages" finished-at="2025-09-11T17:07:26 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetupPages -->
+        <test-method signature="TC_Product_02_sortFunctionality()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:07:26 IST" name="TC_Product_02_sortFunctionality" finished-at="2025-09-11T17:07:30 IST" duration-ms="3523" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Product_02_sortFunctionality -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@292b08d6]" started-at="2025-09-11T17:07:30 IST" name="tearDown" finished-at="2025-09-11T17:07:40 IST" duration-ms="10084" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

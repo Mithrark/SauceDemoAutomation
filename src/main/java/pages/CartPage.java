@@ -39,6 +39,10 @@ public class CartPage {
 		return driver.findElement(CartText).getText();
 
 	}
+	
+	public void ClickCart() {
+		driver.findElement(CartText).click();
+	}
 
 	public void ClickProduct(String ProductName) {
 
@@ -68,7 +72,10 @@ public class CartPage {
 			AddtoCart(name);
 		}
 	}
-
 	
+	// Check if a product is present in the cart
+	public boolean isProductInCart(String productName) {
+	    return !driver.findElements(By.xpath("//div[@class='cart_item']//div[text()='" + productName + "']")).isEmpty();
+	}
 	
 }
