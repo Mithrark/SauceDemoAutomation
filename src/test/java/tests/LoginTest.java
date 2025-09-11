@@ -103,7 +103,7 @@ public class LoginTest extends BaseTest {
 	}
 
 
-	@Test public void TC_Cart_01_01addToCart() throws InterruptedException { 
+	@Test public void TC_Cart_01_addToCart() throws InterruptedException { 
 	
 		String[] ProductNames = loginAndGetProducts();
 
@@ -117,7 +117,7 @@ public class LoginTest extends BaseTest {
 
 	}
 
-	@Test public void TC_Cart_02_02viewProduct() throws InterruptedException {
+	@Test public void TC_Cart_02_viewProduct() throws InterruptedException {
 
 		String[] ProductNames = loginAndGetProducts();
 
@@ -133,7 +133,7 @@ public class LoginTest extends BaseTest {
 		cartPage.ClickAddToCart(); 
 	}
 
-	@Test public void TC_Cart_03_03AddMultipleItems() throws InterruptedException {
+	@Test public void TC_Cart_03_AddMultipleItems() throws InterruptedException {
 
 		String[] ProductNames = loginAndGetProducts();
 
@@ -147,7 +147,7 @@ public class LoginTest extends BaseTest {
 
 
 	@Test
-	public void TC_Cart_04_04RemoveItemFromCart() throws InterruptedException {
+	public void TC_Cart_04_RemoveItemFromCart() throws InterruptedException {
 
 		String[] ProductNames = loginAndGetProducts();
 
