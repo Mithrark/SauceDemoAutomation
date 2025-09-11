@@ -1,5 +1,7 @@
 package tests;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -17,6 +19,9 @@ public class LoginTest extends BaseTest {
 	ProductsPage productsPage;
 	CartPage cartPage;
 
+	//String[] ProductNames = {"Sauce Labs Backpack","Sauce Labs Bike Light"};
+	String[] ProductNames;
+	
 	@BeforeMethod
 	public void SetupPages() {
 
@@ -26,6 +31,8 @@ public class LoginTest extends BaseTest {
 
 		//Login with valid credentials (standard_user)
 		login.LoginToApp("standard_user", "secret_sauce");
+		
+		ProductNames = productsPage.getProductNames().toArray(new String[0]);
 	}
 	/*
 	@Test
@@ -98,11 +105,14 @@ public class LoginTest extends BaseTest {
 	 */
 
 	@Test
-	public void TC_Cart_01_addToCart() {
+	public void TC_Cart_01_addToCart() {	
+		/*for(String name : ProductNames) {
+			System.out.println("Product Names: "+name);
+		}*/
 		
-		Assert.assertEquals(cartPage.ButtonBeforeClick(),"Add to cart");
-		cartPage.AddtoCart();
-		Assert.assertEquals(cartPage.ButtonAfterClick(), "Remove");
+		Assert.assertEquals(cartPage.ButtonText(ProductNames[1]),"Add to cart");
+		cartPage.AddtoCart(ProductNames[1]);
+		Assert.assertEquals(cartPage.ButtonText(ProductNames[1]), "Remove");
 		Assert.assertEquals(cartPage.CartCount(), "1");		
 		
 	}
@@ -110,6 +120,25 @@ public class LoginTest extends BaseTest {
 	@Test
 	public void TC_Cart_02_viewProduct() {
 		
-		cartPage.ClickProduct("Sauce Labs Backpack");
+		cartPage.ClickProduct(ProductNames[1]);
+		
+		//verify title
+		Assert.assertTrue(cartPage.getTitle().contains(ProductNames[1]));
+		
+		//verify description
+		Assert.assertTrue(cartPage.getDescription().length()>0);
+		
+		//click on Add to cart
+		cartPage.ClickAddToCart();
+	}
+	
+	@Test
+	public void TC_Cart_03_AddMultipleItems() {
+		
+		String[] ProductsToAdd = {ProductNames[0], ProductNames[2], ProductNames[3]};
+		cartPage.AddMultipleItems(ProductsToAdd);
+		
+		Assert.assertEquals(Integer.parseInt(cartPage.CartCount()), ProductsToAdd.length);
+		
 	}
 }
