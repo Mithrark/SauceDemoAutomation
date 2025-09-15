@@ -1,10 +1,13 @@
 package tests;
 
+import java.time.Duration;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import pages.CartPage;
+import pages.CheckoutPage;
 import pages.InventoryPage;
 import pages.LoginPage;
 import pages.ProductsPage;
@@ -16,6 +19,7 @@ public class LoginTest extends BaseTest {
 
 	ProductsPage productsPage;
 	CartPage cartPage;
+	CheckoutPage checkoutPage;
 
 	@BeforeMethod
 	public void SetupPages() {
@@ -23,9 +27,12 @@ public class LoginTest extends BaseTest {
 		login = new LoginPage(driver);
 		productsPage = new ProductsPage(driver);
 		cartPage = new CartPage(driver);
+		checkoutPage = new CheckoutPage(driver);
 
 		//Login with valid credentials (standard_user)
 		//login.LoginToApp("standard_user", "secret_sauce");
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 	}
 
@@ -41,6 +48,7 @@ public class LoginTest extends BaseTest {
 		return productsPage.getProductNames().toArray(new String[0]);
 	}
 
+	
 	@Test public void TC_Login_01_validLogin() {
 
 		//Login with valid credentials (standard_user)
@@ -107,8 +115,8 @@ public class LoginTest extends BaseTest {
 	
 		String[] ProductNames = loginAndGetProducts();
 
-		for(String name : ProductNames) {
-			System.out.println("Product Names: "+name); }
+		//for(String name : ProductNames) {
+			//System.out.println("Product Names: "+name); }
 
 		Assert.assertEquals(cartPage.ButtonText(ProductNames[1]),"Add to cart");
 		cartPage.AddtoCart(ProductNames[1]);
@@ -168,5 +176,33 @@ public class LoginTest extends BaseTest {
 		//check if ProductsToRemove is present
 		Assert.assertFalse(cartPage.isProductInCart(ProductsToRemove[0]),"Removed product '" + ProductsToRemove[0] + "' is still present in the cart!");
 
+	}
+	
+	@Test
+	public void TC_Checkout_01_SuccessfulCheckout() throws InterruptedException {
+		
+		String[] ProductNames = loginAndGetProducts();
+		
+		//Add Items
+		String[] ProductsToAdd = {ProductNames[0], ProductNames[2], ProductNames[3]};
+		cartPage.AddMultipleItems(ProductsToAdd);
+		
+		//Click on Cart
+		checkoutPage.ClickCart();
+		
+		//Click on Checkout
+		checkoutPage.ClickCheckout();
+		
+		//Fill Info and click on continue
+		checkoutPage.FillInfo("Mithra", "R K", "600273");
+		
+		//Click Finish
+		checkoutPage.ClickFinish();
+		
+		System.out.println("checkout final msg : "+checkoutPage.OrderCompleteText());
+		
+		Assert.assertEquals(checkoutPage.OrderCompleteText(), "Thank you for your order!");
+		
+		
 	}
 }

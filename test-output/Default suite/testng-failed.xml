@@ -5,13 +5,10 @@
     <classes>
       <class name="tests.LoginTest">
         <methods>
-          <include name="TC_Cart_02_02viewProduct"/>
           <include name="SetupPages"/>
-          <include name="TC_Cart_04_04RemoveItemFromCart"/>
-          <include name="TC_Cart_01_01addToCart"/>
           <include name="setup"/>
-          <include name="TC_Cart_03_03AddMultipleItems"/>
           <include name="tearDown"/>
+          <include name="TC_Checkout_01_SuccessfulCheckout"/>
         </methods>
       </class> <!-- tests.LoginTest -->
     </classes>
