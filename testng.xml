@@ -17,7 +17,7 @@
 					<include name="TC_Cart_03_AddMultipleItems" />
 					<include name="TC_Cart_04_RemoveItemFromCart" />
 					<include name="TC_Checkout_01_SuccessfulCheckout" />
-
+					<include name="TC_Checkout_02_CheckoutwithMissingInfo" />
 				</methods>
 			</class>
 		</classes>

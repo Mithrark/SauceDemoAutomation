@@ -19,6 +19,7 @@ public class CheckoutPage {
 	By ContinueButton = By.id("continue");
 	By FinishButton = By.id("finish");
 	By OrderCompleteText = By.className("complete-header");
+	By ErrorText = By.xpath("//*[@data-test=\"error\"]");
 	
 	public void ClickCart() {
 		driver.findElement(Cart).click();
@@ -44,6 +45,10 @@ public class CheckoutPage {
 	
 	public String OrderCompleteText() {
 		return driver.findElement(OrderCompleteText).getText();
+	}
+	
+	public String ErrorText() {
+		return driver.findElement(ErrorText).getText();
 	}
 }
 

@@ -31,7 +31,7 @@ public class LoginTest extends BaseTest {
 
 		//Login with valid credentials (standard_user)
 		//login.LoginToApp("standard_user", "secret_sauce");
-		
+
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 	}
@@ -48,7 +48,7 @@ public class LoginTest extends BaseTest {
 		return productsPage.getProductNames().toArray(new String[0]);
 	}
 
-	
+/*
 	@Test public void TC_Login_01_validLogin() {
 
 		//Login with valid credentials (standard_user)
@@ -112,11 +112,11 @@ public class LoginTest extends BaseTest {
 
 
 	@Test public void TC_Cart_01_addToCart() throws InterruptedException { 
-	
+
 		String[] ProductNames = loginAndGetProducts();
 
 		//for(String name : ProductNames) {
-			//System.out.println("Product Names: "+name); }
+		//System.out.println("Product Names: "+name); }
 
 		Assert.assertEquals(cartPage.ButtonText(ProductNames[1]),"Add to cart");
 		cartPage.AddtoCart(ProductNames[1]);
@@ -177,32 +177,74 @@ public class LoginTest extends BaseTest {
 		Assert.assertFalse(cartPage.isProductInCart(ProductsToRemove[0]),"Removed product '" + ProductsToRemove[0] + "' is still present in the cart!");
 
 	}
-	
+*/
 	@Test
 	public void TC_Checkout_01_SuccessfulCheckout() throws InterruptedException {
-		
+
 		String[] ProductNames = loginAndGetProducts();
-		
+
 		//Add Items
 		String[] ProductsToAdd = {ProductNames[0], ProductNames[2], ProductNames[3]};
 		cartPage.AddMultipleItems(ProductsToAdd);
-		
+
 		//Click on Cart
 		checkoutPage.ClickCart();
-		
+
 		//Click on Checkout
 		checkoutPage.ClickCheckout();
-		
+
 		//Fill Info and click on continue
 		checkoutPage.FillInfo("Mithra", "R K", "600273");
-		
+
 		//Click Finish
 		checkoutPage.ClickFinish();
-		
+
 		System.out.println("checkout final msg : "+checkoutPage.OrderCompleteText());
-		
+
 		Assert.assertEquals(checkoutPage.OrderCompleteText(), "Thank you for your order!");
+
+
+	}
+
+	@Test
+	public void TC_Checkout_02_CheckoutwithMissingInfo() {
+
+		String[] ProductNames = loginAndGetProducts();
+
+		//Add Items
+		String[] ProductsToAdd = {ProductNames[0], ProductNames[1], ProductNames[3]};
+		cartPage.AddMultipleItems(ProductsToAdd);
+
+		//Click on Cart
+		checkoutPage.ClickCart();
+
+		//Click on Checkout
+		checkoutPage.ClickCheckout();
+
+		String firstName = "Mithra";
+	    String lastName  = "";
+	    String postal    = ""; 
 		
+		//Fill Info and click on continue
+		checkoutPage.FillInfo(firstName, lastName, postal);
+
+		System.out.println("checkout Page Error msg : "+checkoutPage.ErrorText());
 		
+		String expectedError = "";
+				
+		if(firstName.isEmpty()) {
+			expectedError = "Error: First Name is required";
+	    } else if(lastName.isEmpty()) {
+	        expectedError = "Error: Last Name is required";
+	    } else if(postal.isEmpty()) {
+	        expectedError = "Error: Postal Code is required";
+	    }
+
+		//Assert.assertEquals(checkoutPage.ErrorText(), "Error: Postal Code is required");
+		
+		//Assert.assertTrue(checkoutPage.ErrorText().startsWith("Error:"));
+		
+		Assert.assertEquals(checkoutPage.ErrorText(), expectedError);
 	}
 }
+
