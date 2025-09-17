@@ -6,8 +6,8 @@
       <class name="tests.LoginTest">
         <methods>
           <include name="SetupPages"/>
+          <include name="TC_Checkout_03_Validate_Order_Checkout"/>
           <include name="setup"/>
-          <include name="TC_Checkout_02_CheckoutwithMissingInfo"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- tests.LoginTest -->

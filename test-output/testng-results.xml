@@ -1,41 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-16T20:40:37 IST" name="Default suite" finished-at="2025-09-16T20:40:51 IST" duration-ms="14067">
+  <suite started-at="2025-09-17T17:08:46 IST" name="Default suite" finished-at="2025-09-17T17:08:53 IST" duration-ms="7859">
     <groups>
     </groups>
-    <test started-at="2025-09-16T20:40:37 IST" name="Default test" finished-at="2025-09-16T20:40:51 IST" duration-ms="14067">
+    <test started-at="2025-09-17T17:08:46 IST" name="Default test" finished-at="2025-09-17T17:08:53 IST" duration-ms="7859">
       <class name="tests.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@7c7a06ec]" started-at="2025-09-16T20:40:37 IST" name="setup" finished-at="2025-09-16T20:40:43 IST" duration-ms="6110" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@776aec5c]" started-at="2025-09-17T17:08:46 IST" name="setup" finished-at="2025-09-17T17:08:52 IST" duration-ms="6428" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="SetupPages()[pri:0, instance:tests.LoginTest@7c7a06ec]" started-at="2025-09-16T20:40:43 IST" name="SetupPages" finished-at="2025-09-16T20:40:43 IST" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="SetupPages()[pri:0, instance:tests.LoginTest@776aec5c]" started-at="2025-09-17T17:08:52 IST" name="SetupPages" finished-at="2025-09-17T17:08:52 IST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetupPages -->
-        <test-method signature="TC_Checkout_01_SuccessfulCheckout()[pri:0, instance:tests.LoginTest@7c7a06ec]" started-at="2025-09-16T20:40:43 IST" name="TC_Checkout_01_SuccessfulCheckout" finished-at="2025-09-16T20:40:45 IST" duration-ms="1428" status="PASS">
+        <test-method signature="TC_Checkout_03_Validate_Order_Checkout()[pri:0, instance:tests.LoginTest@776aec5c]" started-at="2025-09-17T17:08:52 IST" name="TC_Checkout_03_Validate_Order_Checkout" finished-at="2025-09-17T17:08:53 IST" duration-ms="1387" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_Checkout_01_SuccessfulCheckout -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@7c7a06ec]" started-at="2025-09-16T20:40:45 IST" name="tearDown" finished-at="2025-09-16T20:40:45 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@7c7a06ec]" started-at="2025-09-16T20:40:45 IST" name="setup" finished-at="2025-09-16T20:40:50 IST" duration-ms="5329" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="SetupPages()[pri:0, instance:tests.LoginTest@7c7a06ec]" started-at="2025-09-16T20:40:50 IST" name="SetupPages" finished-at="2025-09-16T20:40:50 IST" duration-ms="6" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SetupPages -->
-        <test-method signature="TC_Checkout_02_CheckoutwithMissingInfo()[pri:0, instance:tests.LoginTest@7c7a06ec]" started-at="2025-09-16T20:40:50 IST" name="TC_Checkout_02_CheckoutwithMissingInfo" finished-at="2025-09-16T20:40:51 IST" duration-ms="1138" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_Checkout_02_CheckoutwithMissingInfo -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@7c7a06ec]" started-at="2025-09-16T20:40:51 IST" name="tearDown" finished-at="2025-09-16T20:40:51 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- TC_Checkout_03_Validate_Order_Checkout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@776aec5c]" started-at="2025-09-17T17:08:53 IST" name="tearDown" finished-at="2025-09-17T17:08:53 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

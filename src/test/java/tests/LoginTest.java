@@ -1,6 +1,9 @@
 package tests;
 
 import java.time.Duration;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -177,7 +180,7 @@ public class LoginTest extends BaseTest {
 		Assert.assertFalse(cartPage.isProductInCart(ProductsToRemove[0]),"Removed product '" + ProductsToRemove[0] + "' is still present in the cart!");
 
 	}
-*/
+
 	@Test
 	public void TC_Checkout_01_SuccessfulCheckout() throws InterruptedException {
 
@@ -245,6 +248,65 @@ public class LoginTest extends BaseTest {
 		//Assert.assertTrue(checkoutPage.ErrorText().startsWith("Error:"));
 		
 		Assert.assertEquals(checkoutPage.ErrorText(), expectedError);
+	}
+*/	
+	@Test
+	public void TC_Checkout_03_Validate_Order_Checkout() {
+		
+		loginAndGetProducts();
+		
+		//Get Item name and price from homepage
+		// Select products by name only
+		String[] selectedProducts = {"Sauce Labs Backpack", "Sauce Labs Bolt T-Shirt", "Sauce Labs Fleece Jacket"};
+		cartPage.AddMultipleItems(selectedProducts);
+
+		// Get product map (name → price)
+		Map<String, Double> productMap = productsPage.getProductsWithPrices();
+
+		// Extract only the selected prices
+		Double[] selectedPrices = new Double[selectedProducts.length];
+		for (int i = 0; i < selectedProducts.length; i++) {
+		    selectedPrices[i] = productMap.get(selectedProducts[i]);
+		}
+
+		String HomeProductNames = Arrays.toString(selectedProducts);
+		String HomeProductPrices = Arrays.toString(selectedPrices);
+		//Double[] HomeProductPrices = selectedPrices;
+		
+		
+		System.out.println("HomeProductPrices: "+HomeProductPrices);
+		
+		//Click on Cart
+		checkoutPage.ClickCart();
+
+		//Click on Checkout
+		checkoutPage.ClickCheckout();
+
+		//Fill Info and click on continue
+		checkoutPage.FillInfo("Mithra", "R K", "600273");		
+		
+		List<Double> ProductPrices = productsPage.getPrices();
+		
+		//Validate Product Name, prices
+		String Checkout_ProductNames = productsPage.getProductNames().toString();
+		String Checkout_ProductPrices = ProductPrices.toString();
+		
+		System.out.println("Checkout_ProductPrices: "+ Checkout_ProductPrices);
+		
+		Assert.assertEquals(Checkout_ProductNames, HomeProductNames);
+		Assert.assertEquals(Checkout_ProductPrices, HomeProductPrices);
+		
+		//check Item total -> sum of items price
+		//System.out.println("Item total: "+checkoutPage.Item_Total());	
+		
+		double total = 0.0;
+		for (Double price : ProductPrices) {
+		    total += price;
+		}
+		System.out.println("Total: " + total);
+		
+		Assert.assertEquals(checkoutPage.Item_Total(), String.format("%.2f", total));
+		
 	}
 }
 

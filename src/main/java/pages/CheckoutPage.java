@@ -21,6 +21,8 @@ public class CheckoutPage {
 	By OrderCompleteText = By.className("complete-header");
 	By ErrorText = By.xpath("//*[@data-test=\"error\"]");
 	
+	By ItemTotal = By.className("summary_subtotal_label");
+	
 	public void ClickCart() {
 		driver.findElement(Cart).click();
 	}
@@ -49,6 +51,10 @@ public class CheckoutPage {
 	
 	public String ErrorText() {
 		return driver.findElement(ErrorText).getText();
+	}
+	
+	public String Item_Total() {
+		return driver.findElement(ItemTotal).getText().replace("Item total: $", "");
 	}
 }
 

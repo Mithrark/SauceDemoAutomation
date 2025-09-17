@@ -2,7 +2,9 @@ package pages;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -81,6 +83,26 @@ public class ProductsPage {
         return actualNames.equals(sortedNames);
     }
     
+    public Map<String, Double> getProductsWithPrices() {
+        List<WebElement> nameElements = driver.findElements(productNames);
+        List<WebElement> priceElements = driver.findElements(productPrices);
+
+        Map<String, Double> productMap = new HashMap<>();
+
+        for (int i = 0; i < nameElements.size(); i++) {
+            String name = nameElements.get(i).getText();
+            Double price = Double.parseDouble(priceElements.get(i).getText().replace("$", ""));
+            productMap.put(name, price);
+        }
+
+        return productMap;
+    }
+
+    //validate product name and price in checkout page
+    
+ //   public void Checkout_ProductName() {
+   // 	productNames
+    //}
 }
 
 
