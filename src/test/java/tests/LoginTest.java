@@ -269,12 +269,11 @@ public class LoginTest extends BaseTest {
 		    selectedPrices[i] = productMap.get(selectedProducts[i]);
 		}
 
-		String HomeProductNames = Arrays.toString(selectedProducts);
-		String HomeProductPrices = Arrays.toString(selectedPrices);
-		//Double[] HomeProductPrices = selectedPrices;
+		String SelectedProductNames = Arrays.toString(selectedProducts);
+		String SelectedProductPrices = Arrays.toString(selectedPrices);		
 		
-		
-		System.out.println("HomeProductPrices: "+HomeProductPrices);
+		System.out.println("Selected Product Names : "+SelectedProductNames);
+		System.out.println("Selected Product Prices : "+SelectedProductPrices);
 		
 		//Click on Cart
 		checkoutPage.ClickCart();
@@ -291,22 +290,39 @@ public class LoginTest extends BaseTest {
 		String Checkout_ProductNames = productsPage.getProductNames().toString();
 		String Checkout_ProductPrices = ProductPrices.toString();
 		
-		System.out.println("Checkout_ProductPrices: "+ Checkout_ProductPrices);
+		//System.out.println("Checkout_ProductPrices: "+ Checkout_ProductPrices);
 		
-		Assert.assertEquals(Checkout_ProductNames, HomeProductNames);
-		Assert.assertEquals(Checkout_ProductPrices, HomeProductPrices);
+		Assert.assertEquals(Checkout_ProductNames, SelectedProductNames);
+		Assert.assertEquals(Checkout_ProductPrices, SelectedProductPrices);
+		
+		System.out.println("Product Names in checkout page : "+Checkout_ProductNames);
+		System.out.println("Product Prices in checkout page : "+Checkout_ProductPrices);
 		
 		//check Item total -> sum of items price
-		//System.out.println("Item total: "+checkoutPage.Item_Total());	
 		
 		double total = 0.0;
 		for (Double price : ProductPrices) {
 		    total += price;
 		}
-		System.out.println("Total: " + total);
+		//System.out.println("Total: " + total);
 		
 		Assert.assertEquals(checkoutPage.Item_Total(), String.format("%.2f", total));
+		System.out.println("Item Total is $"+checkoutPage.Item_Total());
 		
+		//Validate if Tax is 8% of Item Total
+		
+		double Item_total= Double.parseDouble(checkoutPage.Item_Total());
+		String ExpectedTax = String.format("%.2f", Item_total*0.08);
+		
+		Assert.assertEquals(checkoutPage.Tax(), ExpectedTax );
+		System.out.println("Tax is $"+checkoutPage.Tax());
+		
+		//Validate Total = Item Total + tax
+		
+		double ExpectedTotal = (Double.parseDouble(String.format("%.2f", total))) + (Double.parseDouble(ExpectedTax));		
+		
+		Assert.assertEquals(Double.parseDouble(checkoutPage.Total()), ExpectedTotal);
+		System.out.println("Total is $"+ExpectedTotal);
 	}
 }
 
