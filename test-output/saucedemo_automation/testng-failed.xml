@@ -8,7 +8,7 @@
           <include name="SetupPages"/>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="TC_Checkout_01_SuccessfulCheckout"/>
+          <include name="TC_Account_02_Logout"/>
         </methods>
       </class> <!-- tests.LoginTest -->
     </classes>

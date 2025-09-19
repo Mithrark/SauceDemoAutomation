@@ -39,4 +39,7 @@ public class LoginPage {
 		return driver.findElement(errorMsg).getText();
 	}
 	
+	public void LoginButtoncheck() {
+		driver.findElement(loginButton).isDisplayed();
+	}
 }

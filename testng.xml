@@ -9,7 +9,7 @@
 					<include name="TC_Login_01_validLogin" />
 					<include name="TC_Login_02_invalidLogin" />
 					<include name="TC_Login_03_emptyFields" />
-					<include name="TC_Login_04_lockedOutUser" />
+					<include name="TC_Login_04_lockedOutUser" /> 
 					<include name="TC_Product_01_productsVisbile" />
 					<include name="TC_Product_02_sortFunctionality" />
 					<include name="TC_Cart_01_addToCart" />
@@ -18,6 +18,9 @@
 					<include name="TC_Cart_04_RemoveItemFromCart" />
 					<include name="TC_Checkout_01_SuccessfulCheckout" />
 					<include name="TC_Checkout_02_CheckoutwithMissingInfo" />
+					<include name="TC_Checkout_03_Validate_Order_Checkout" />
+					<include name="TC_Account_01_NavigateBackHome" />
+					<include name="TC_Account_02_Logout" />
 				</methods>
 			</class>
 		</classes>

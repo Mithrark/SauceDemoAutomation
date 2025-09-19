@@ -13,6 +13,7 @@ import pages.CartPage;
 import pages.CheckoutPage;
 import pages.InventoryPage;
 import pages.LoginPage;
+import pages.LogoutPage;
 import pages.ProductsPage;
 import utils.BaseTest;
 
@@ -23,6 +24,7 @@ public class LoginTest extends BaseTest {
 	ProductsPage productsPage;
 	CartPage cartPage;
 	CheckoutPage checkoutPage;
+	LogoutPage logoutPage;
 
 	@BeforeMethod
 	public void SetupPages() {
@@ -31,6 +33,7 @@ public class LoginTest extends BaseTest {
 		productsPage = new ProductsPage(driver);
 		cartPage = new CartPage(driver);
 		checkoutPage = new CheckoutPage(driver);
+		logoutPage = new LogoutPage(driver);
 
 		//Login with valid credentials (standard_user)
 		//login.LoginToApp("standard_user", "secret_sauce");
@@ -51,7 +54,7 @@ public class LoginTest extends BaseTest {
 		return productsPage.getProductNames().toArray(new String[0]);
 	}
 
-/*
+
 	@Test public void TC_Login_01_validLogin() {
 
 		//Login with valid credentials (standard_user)
@@ -249,7 +252,7 @@ public class LoginTest extends BaseTest {
 		
 		Assert.assertEquals(checkoutPage.ErrorText(), expectedError);
 	}
-*/	
+	
 	@Test
 	public void TC_Checkout_03_Validate_Order_Checkout() {
 		
@@ -323,6 +326,28 @@ public class LoginTest extends BaseTest {
 		
 		Assert.assertEquals(Double.parseDouble(checkoutPage.Total()), ExpectedTotal);
 		System.out.println("Total is $"+ExpectedTotal);
+	}
+	
+	@Test
+	public void TC_Account_01_NavigateBackHome() throws InterruptedException {
+		
+		TC_Checkout_01_SuccessfulCheckout();
+		
+		//click Back Home
+		logoutPage.BackHomebutton();
+		
+		//Validate if redirected to home page
+		Assert.assertTrue(productsPage.getProductCount() >=6);
+	}
+	
+	@Test
+	public void TC_Account_02_Logout() throws InterruptedException {
+		
+		TC_Account_01_NavigateBackHome();
+		
+		logoutPage.Logout();
+		
+		login.LoginButtoncheck();
 	}
 }
 
