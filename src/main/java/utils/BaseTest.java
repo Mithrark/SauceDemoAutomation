@@ -17,10 +17,7 @@ public class BaseTest {
 
 	@BeforeMethod
 	public void setup(){
-		//WebDriverManager.edgedriver().setup();
-		//System.setProperty("webdriver.edge.driver", "C:\\Users\\mithra.r.k\\Eclipse\\eclipse-workspace\\Common_Steps_with_Sedgwick_Reference-19March\\src\\main\\resources\\msedgedriver.exe");
-		//driver=new EdgeDriver();
-		
+				
 		ChromeOptions options = new ChromeOptions();
 		String userProfile = "C:/Temp/ChromeProfile_" + System.currentTimeMillis();
 		options.addArguments("--user-data-dir=" + userProfile);

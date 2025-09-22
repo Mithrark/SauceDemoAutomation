@@ -337,7 +337,8 @@ public class LoginTest extends BaseTest {
 		logoutPage.BackHomebutton();
 		
 		//Validate if redirected to home page
-		Assert.assertTrue(productsPage.getProductCount() >=6);
+        Assert.assertTrue(driver.getCurrentUrl().contains("inventory"));
+
 	}
 	
 	@Test
@@ -348,6 +349,8 @@ public class LoginTest extends BaseTest {
 		logoutPage.Logout();
 		
 		login.LoginButtoncheck();
+        Assert.assertTrue(driver.getCurrentUrl().contains("saucedemo.com"));
+
 	}
 }
 
